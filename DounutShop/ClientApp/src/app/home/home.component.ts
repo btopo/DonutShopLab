@@ -14,7 +14,9 @@ export class HomeComponent {
   constructor(private thisDonutService: DonutService) {
 
   }
-
+  ngOnInit(): void {
+    this.getDonutList();
+  }  
   private isNewPostsAvailableEventSubscribed: boolean = false;
   public getDonutList() {
     // The order is important here.  If we subscribe FIRST, we can guarantee we will receive
