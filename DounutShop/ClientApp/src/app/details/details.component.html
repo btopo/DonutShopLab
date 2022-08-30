@@ -1,0 +1,11 @@
+<h1>Donut Details</h1>
+
+
+<h3>Name: {{loadedDetails.name}}</h3>
+<h3>Calories: {{loadedDetails.calories}}</h3>
+<h3 *ngFor="let currentString of loadedDetails.extras">Extras: {{currentString}}</h3>
+<p><img src="{{loadedDetails.photo}}"height="200" width="200" /></p>
+<h3>Photo Attribution:  {{loadedDetails.photo_attribution}}</h3>
+<button class="btn btn btn-primary" (click)="addToCart(loadedDetails)">Add To Cart</button>
+<button class="btn btn-primary" routerLink="/"> Back to List</button>
+<button class="btn btn-primary" routerLink="/cart"> View Cart</button>
